@@ -5,6 +5,12 @@ resource "aws_instance" "capstone" {
   vpc_security_group_ids = [aws_security_group.capstone_sg.id]
   user_data     = file("${path.module}/bootstrap.sh")
 
+
+  root_block_device {
+    volume_size = 30      # size in GB
+    volume_type = "gp3"   # SSD type
+  }
+
   tags = {
     Name = "capstone-devops"
   }
