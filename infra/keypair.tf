@@ -1,5 +1,5 @@
 variable "pub_key_path" {
-  default = "/mnt/c/Users/ramki/OneDrive/Desktop/AWS_SESSION/rams23jul2025.pub"
+  default = "~/.ssh/capstone-key.pub"
 }
 
 resource "aws_key_pair" "deployer" {
